@@ -4,6 +4,8 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
+  <PrimeButton label="Primary" />
+  <PrimeButton label="Secondary" severity="secondary" />
   <Vueform class="p-5">
     <TextElement name="hello_world" label="Hello" placeholder="World" />
   </Vueform>

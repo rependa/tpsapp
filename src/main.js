@@ -1,3 +1,4 @@
+// import "primevue/resources/primevue.min.css"; /* Deprecated */
 import './assets/main.css'
 
 import { createApp } from 'vue'
@@ -13,13 +14,15 @@ import Tailwind from 'primevue/passthrough/tailwind';
 
 
 import Panel from 'primevue/panel';
+import Button from 'primevue/button';
 
 const app = createApp(App)
 
 app.use(Vueform, vueformConfig)
-app.use(PrimeVue, { unstyled: true, pt: Tailwind });
+app.use(PrimeVue, { unstyled: true, pt: Tailwind, ptOptions: { mergeProps: true } });
 
 app.component('PrimePanel', Panel);
+app.component('PrimeButton', Button);
 
 app.use(createPinia())
 app.use(router)
